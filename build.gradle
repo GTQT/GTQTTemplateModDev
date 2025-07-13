@@ -166,6 +166,7 @@ dependencies {
         implementation rfg.deobf(files("libs/architecturecraft-1.12-3.108.jar"))
         implementation rfg.deobf(files("libs/OpenComputers-MC1.12.2-1.8.6+cd8851e.jar"))
     }
+    /*
     if(usePollution) {
         implementation rfg.deobf("curse.maven:thaumic-jei-285492:2705304")
         implementation rfg.deobf("curse.maven:baubles-227083:2518667")
@@ -181,11 +182,23 @@ dependencies {
     if(useGtqtspace) {
         implementation rfg.deobf(files("libs/gtqtspace-1.8.0.jar"))
     }
+
+     */
     //其他前置，考虑加载顺序问题卸载后边
     implementation rfg.deobf(files("libs/jei_1.12.2-4.16.1.1003.jar"))
     implementation rfg.deobf(files("libs/theoneprobe-1.12-1.4.28.jar"))
     implementation rfg.deobf(files("libs/Chisel-MC1.12.2-1.0.2.45.jar"))
     implementation rfg.deobf(files("libs/CTM-MC1.12.2-1.0.2.31.jar"))
+    implementation rfg.deobf(files("libs/CraftTweaker2-1.12-4.1.20.703.jar"))
+
+    compileOnlyApi 'org.jetbrains:annotations:24.1.0'
+    annotationProcessor 'org.jetbrains:annotations:24.1.0'
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.38'
+    annotationProcessor 'org.projectlombok:lombok:1.18.38'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.38'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.38'
 }
 
 apply from: 'gradle/scripts/dependencies.gradle'

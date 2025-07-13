@@ -1,6 +1,6 @@
 package gtqt.example.client;
 
-import keqing.gtqtcore.common.CommonProxy;
+import gtqt.example.common.CommonProxy;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
